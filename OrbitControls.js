@@ -26,11 +26,11 @@ THREE.OrbitControls = function ( object, domElement ) {
 	this.target = new THREE.Vector3();
 
 	// How far you can dolly in and out ( PerspectiveCamera only )
-	this.minDistance = 0;
+	this.minDistance = 5;
 	this.maxDistance = Infinity;
 
 	// How far you can zoom in and out ( OrthographicCamera only )
-	this.minZoom = 0;
+	this.minZoom = 5;
 	this.maxZoom = Infinity;
 
 	// How far you can orbit vertically, upper and lower limits.
