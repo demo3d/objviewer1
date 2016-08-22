@@ -26,11 +26,11 @@ THREE.OrbitControls = function ( object, domElement ) {
 	this.target = new THREE.Vector3();
 
 	// How far you can dolly in and out ( PerspectiveCamera only )
-	this.minDistance = .1;
+	this.minDistance = 0;
 	this.maxDistance = Infinity;
 
 	// How far you can zoom in and out ( OrthographicCamera only )
-	this.minZoom = .1;
+	this.minZoom = 0;
 	this.maxZoom = Infinity;
 
 	// How far you can orbit vertically, upper and lower limits.
@@ -63,7 +63,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 	// Set to true to automatically rotate around the target
 	// If auto-rotate is enabled, you must call controls.update() in your animation loop
-	this.autoRotate = false;
+	this.autoRotate = true;
 	this.autoRotateSpeed = 2.0; // 30 seconds per round when fps is 60
 
 	// Set to false to disable use of the keys
@@ -249,7 +249,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 	var spherical = new THREE.Spherical();
 	var sphericalDelta = new THREE.Spherical();
 
-	var scale = 1;
+	var scale = 10;
 	var panOffset = new THREE.Vector3();
 	var zoomChanged = false;
 
