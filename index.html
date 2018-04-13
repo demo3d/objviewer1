@@ -103,7 +103,7 @@
             var mtlLoader = new THREE.MTLLoader();
             mtlLoader.setBaseUrl('assets/');
             mtlLoader.setPath('assets/');
-            mtlLoader.load('model_mesh.obj.mtl', function (materials) {
+            mtlLoader.load('materials.mtl', function (materials) {
 
                 materials.preload();
 
@@ -113,7 +113,7 @@
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('assets/');
-                objLoader.load('model_mesh.obj', function (object) {
+                objLoader.load('model-triangulated.obj', function (object) {
 
                     scene.add(object);
 
