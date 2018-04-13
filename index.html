@@ -103,21 +103,21 @@
             var mtlLoader = new THREE.MTLLoader();
             mtlLoader.setBaseUrl('assets/');
             mtlLoader.setPath('assets/');
-            mtlLoader.load('materials.mtl', function (materials) {
+//             mtlLoader.load('materials.mtl', function (materials) {
 
-                materials.preload();
+//                 materials.preload();
 
-                materials.materials.material_0.map.magFilter = THREE.NearestFilter;
-                materials.materials.material_0.map.minFilter = THREE.LinearFilter;
+//                 materials.materials.material_0.map.magFilter = THREE.NearestFilter;
+//                 materials.materials.material_0.map.minFilter = THREE.LinearFilter;
 
                 var objLoader = new THREE.OBJLoader();
-                objLoader.setMaterials(materials);
+//                 objLoader.setMaterials(materials);
                 objLoader.setPath('assets/');
                 objLoader.load('model-triangulated.obj', function (object) {
 
                     scene.add(object);
 
-                });
+//                 });
 
             });
 
